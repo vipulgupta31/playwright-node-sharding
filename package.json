@@ -1,0 +1,12 @@
+{
+  "name": "playwright-node-sharding-demo",
+  "version": "1.0.0",
+  "scripts": {
+    "test:normal": "node run-normal.js",
+    "test:shard": "node run-sharded-both.js"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.42.0",
+    "@types/node": "^24.1.0"
+  }
+}

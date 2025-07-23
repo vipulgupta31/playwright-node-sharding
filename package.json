@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "test:normal": "node run-normal.js",
-    "test:shard": "node run-sharded-both.js"
+    "test:shard": "node run-sharded.js"
   },
   "devDependencies": {
     "@playwright/test": "^1.42.0",

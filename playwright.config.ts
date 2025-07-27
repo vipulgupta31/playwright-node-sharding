@@ -1,6 +1,6 @@
 import { defineConfig } from '@playwright/test';
 
-const buildName = 'Playwright Node Sharding Demo';
+const buildName = 'Playwright Node Sharding';
 const ltUsername = process.env.LT_USERNAME;
 const ltAccessKey = process.env.LT_ACCESS_KEY;
 

@@ -1,5 +1,5 @@
 {
-  "name": "playwright-node-sharding-demo",
+  "name": "playwright-node-sharding",
   "version": "1.0.0",
   "scripts": {
     "test:normal": "node run-normal.js",

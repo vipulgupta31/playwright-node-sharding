@@ -7,5 +7,5 @@ test('Selenium Playground title check', async ({ page }) => {
 
 test('Home page header text', async ({ page }) => {
   await page.goto('https://www.lambdatest.com/selenium-playground/');
-  await expect(page.getByText('Checkbox Demo')).toBeVisible;
+  await expect(page.getByText('Checkbox Demo')).toBeVisible();
 });

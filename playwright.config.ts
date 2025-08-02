@@ -1,16 +1,13 @@
 import { defineConfig } from '@playwright/test';
 
-const buildName = 'Playwright Node Sharding Demo';
+const buildName = 'Playwright Node Sharding';
 const ltUsername = process.env.LT_USERNAME;
 const ltAccessKey = process.env.LT_ACCESS_KEY;
 
 export default defineConfig({
   testDir: './tests',
-  timeout: 60000,
-  retries: 0,
-  reporter: [['list'], ['html', { open: 'never' }]],
-
-  // ✅ Define two separate projects: Chrome on Windows and Firefox on macOS
+  reporter: 'html',
+   // ✅ Define two separate projects: Chrome on Windows and Firefox on macOS
   projects: [
     {
       name: 'Chrome-Windows',
@@ -29,8 +26,7 @@ export default defineConfig({
               }
             })
           )}`
-        },
-        browserName: 'chromium'
+        }
       }
     },
     {
@@ -39,7 +35,7 @@ export default defineConfig({
         connectOptions: {
           wsEndpoint: `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(
             JSON.stringify({
-              browserName: 'Firefox',
+              browserName: 'pw-firefox',
               browserVersion: 'latest',
               'LT:Options': {
                 platform: 'macOS Sonoma',
@@ -50,8 +46,7 @@ export default defineConfig({
               }
             })
           )}`
-        },
-        browserName: 'firefox'
+        }
       }
     }
   ]

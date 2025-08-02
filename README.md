@@ -17,21 +17,18 @@ export LT_ACCESS_KEY=your_access_key
 
 ## ▶️ Run tests normally (parallel by default):
 ```bash
-npm run test:normal
+npx playwright test
 ```
 
 ## 🔀 Run tests with sharding (two shards in parallel):
 ```bash
-npm run test:shard
+npx playwright test --shard=X/Y
 ```
-
-Check console logs for total execution times.
 
 ## 📂 Project Structure
  
-- tests/home.test.ts
-- tests/checkbox.test.ts
+- tests/home.spec.ts
+- tests/checkbox.spec.ts
+- tests-examples/demo-todo-app.spec.ts
 - package.json
-- playwright.config.ts        //LambdaTest config to execute on 2 OS and browser combination
-- run-normal.js               //runs tests normally and logs total execution time
-- run-sharded.js         //runs 2 shards in parallel and logs total execution time
+- playwright.config.ts        //LambdaTest config to execute on 2 OS and browser combinations
